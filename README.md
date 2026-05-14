@@ -20,3 +20,14 @@ For this project, I wanted to see if we could automate this triage process using
 * **Result Graphs:** High-resolution images of my confusion matrices, model comparisons, and feature importance graphs.
 
 ---
+## ⚙️ How It Works (The Methodology)
+
+Instead of testing on random software, I strictly limited my dataset to 10 major Python ML/DS libraries. I did this so the AI could learn a very specific technical vocabulary. 
+
+* Insert your Methodology Diagram image here *
+
+**Here is the step-by-step process I followed:**
+1. **Data Collection:** I used the GitHub API to scrape 10,000 recent issue discussions from projects like PyTorch, Hugging Face Transformers, and MLflow.
+2. **Cleaning the Mess:** Real-world GitHub labels are messy. I filtered and merged hundreds of custom tags into three main targets: `bug`, `enhancement`, and `question`.
+3. **NLP Vectorization:** I used TF-IDF to turn the raw text into numerical weight vectors.
+4. **Training:** I compared a Random Forest ensemble against a Linear Support Vector Machine (SVM) to see which handled the text data better.
