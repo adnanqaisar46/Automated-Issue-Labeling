@@ -45,3 +45,9 @@ Both models broke the 90% accuracy barrier. However, **I selected the SVM as my 
 To prove the model wasn't just guessing, I mapped out the highest-weighted words for each category. It turns out the SVM successfully learned the context of software engineering:
 * Words like *'traceback'*, *'error'*, and *'crash'* triggered the **Bug** label.
 * Words like *'how'*, *'help'*, and *'usage'* triggered the **Question** label.
+## 🚀 What's Next?
+
+Getting ~90% accuracy with TF-IDF is a great baseline. But because classic ML doesn't understand the full context of a sentence, my next goal for future research is to upgrade this pipeline to Deep Learning. By fine-tuning a transformer model like RoBERTa, I hope to push the accuracy even higher and completely solve the 'question' recall issue. 
+
+## ⚖️ License
+This project is open-source and available under the [MIT License](LICENSE).
