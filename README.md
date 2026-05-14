@@ -31,3 +31,17 @@ Instead of testing on random software, I strictly limited my dataset to 10 major
 2. **Cleaning the Mess:** Real-world GitHub labels are messy. I filtered and merged hundreds of custom tags into three main targets: `bug`, `enhancement`, and `question`.
 3. **NLP Vectorization:** I used TF-IDF to turn the raw text into numerical weight vectors.
 4. **Training:** I compared a Random Forest ensemble against a Linear Support Vector Machine (SVM) to see which handled the text data better.
+---
+
+## 🏆 The Results
+
+I honestly wasn't sure how well classic ML models would handle complex software engineering text, but the results were surprisingly good. 
+
+Both models broke the 90% accuracy barrier. However, **I selected the SVM as my final optimal model.** Why? Because the dataset had a massive class imbalance (way more bugs than questions). The SVM was much smarter at actually finding the rare 'question' category, giving it a better overall balance.
+
+* Insert your Model Comparison Graph image here *
+
+### Looking Inside the AI's Brain
+To prove the model wasn't just guessing, I mapped out the highest-weighted words for each category. It turns out the SVM successfully learned the context of software engineering:
+* Words like *'traceback'*, *'error'*, and *'crash'* triggered the **Bug** label.
+* Words like *'how'*, *'help'*, and *'usage'* triggered the **Question** label.
